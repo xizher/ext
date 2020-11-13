@@ -26,9 +26,7 @@
     "babel-preset-env": "^1.7.0",
     "eslint": "^7.13.0",
     "nodemon": "^2.0.6",
-    "tern": "^0.24.3"
-  },
-  "directions": {
-    "@": "js.utils"
+    "tern": "^0.24.3",
+    "webpack": "^5.4.0"
   }
 }
