@@ -4,6 +4,10 @@
 ```bash
 git submodule add 【项目地址】
 ```
+如果子模块下存在其他子模块，则通过此命令拉取这些嵌套的子模块
+```bash
+git submodule update --init --recursive 
+```
 ## - git 提交格式规范
 > <type>: <body>
 
