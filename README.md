@@ -4,8 +4,7 @@
 ```bash
 git submodule add 【项目地址】
 ```
-## - git commit type
-
+## - git 提交格式规范
 > <type>: <body>
 
 - feat: 新功能
@@ -15,4 +14,31 @@ git submodule add 【项目地址】
 - refactor: 重构
 - test: 增加测试
 - chore: 构建过程或辅助工具的变动
-## 
+## - git push 至gitee
+
+1. ```
+   git remote add gitee 【gitee对应项目地址】
+   ```
+
+2. ```
+   git push gitee main
+   ```
+## - .js文件生成.d.ts
+
+1. ```
+   npm i dtsmake -g
+   ```
+
+2. ```
+   npm i tern --save-dev
+   ```
+
+3. ```
+   dtsmake -s 【js路径】
+   ```
+## - ext 集
+
+- customevent => 自定义工具类
+- js.ext => js原型扩展
+- js.utils => js通用函数
+
