@@ -4,9 +4,13 @@
 ```bash
 git submodule add 【项目地址】
 ```
-如果子模块下存在其他子模块，则通过此命令拉取这些嵌套的子模块
+如果子模块下存在其他子模块，则通过此命令初始化这些嵌套的子模块
 ```bash
 git submodule update --init --recursive 
+```
+```bash
+git submodule update --remote
+git submodule update --remote --recursive // 嵌套的子模块
 ```
 ## - git 提交格式规范
 > <type>: <body>
