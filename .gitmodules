@@ -7,3 +7,6 @@
 [submodule "customevent"]
 	path = customevent
 	url = https://github.com/xizher/customevent.git
+[submodule "datastructure"]
+	path = datastructure
+	url = https://github.com/xizher/datastructure.git
