@@ -10,3 +10,6 @@
 [submodule "datastructure"]
 	path = datastructure
 	url = https://github.com/xizher/datastructure.git
+[submodule "customgisapi"]
+	path = customgisapi
+	url = https://github.com/xizher/customgisapi.git
