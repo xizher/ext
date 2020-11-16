@@ -67,7 +67,8 @@ graph.addEdge('B', 'F')
 graph.addEdge('E', 'I')
 
 console.log(graph.toString())
-const result = breadthFirstSearch(graph, 'C')
+const result = breadthFirstSearch(graph, 'A')
+// breadthFirstSearch(graph, 'A', v => console.log(v))
 console.log(result)
 
 //#endregion
