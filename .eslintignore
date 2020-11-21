@@ -1,5 +1,5 @@
 node_modules/*
-test/test.html
+*.html
 *.d.ts
 **/dist
 **/*.min.*

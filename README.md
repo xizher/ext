@@ -49,4 +49,6 @@ git submodule update --remote --recursive // 嵌套的子模块
 - customevent => 自定义工具类
 - js.ext => js原型扩展
 - js.utils => js通用函数
+- customgisapi => 自定义地图API
+- datastructure => js数据结构
 

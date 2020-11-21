@@ -12,6 +12,9 @@ module.exports = {
     'ecmaVersion': 12,
     'sourceType': 'module'
   },
+  'globals': {
+    'process': true
+  },
   'rules': {
     'semi': ['error', 'never'], // 行末不用分号
     'quotes': ['error', 'single', { 'allowTemplateLiterals': true }], // 字符串使用单引号
