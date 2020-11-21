@@ -1,5 +1,5 @@
 node_modules/*
 *.html
-*.d.ts
+*.ts
 **/dist
 **/*.min.*

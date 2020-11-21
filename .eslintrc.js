@@ -7,6 +7,7 @@ module.exports = {
   },
   'extends': [
     'eslint:recommended',
+    // "plugin:@typescript-eslint/recommended"
   ],
   'parserOptions': {
     'ecmaVersion': 12,
@@ -15,6 +16,9 @@ module.exports = {
   'globals': {
     'process': true
   },
+  'plugins': [
+    // '@typescript-eslint'
+  ],
   'rules': {
     'semi': ['error', 'never'], // 行末不用分号
     'quotes': ['error', 'single', { 'allowTemplateLiterals': true }], // 字符串使用单引号

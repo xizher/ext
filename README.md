@@ -9,6 +9,7 @@ git submodule add 【项目地址】
 git submodule update --init --recursive 
 ```
 ```bash
+git pull --recurse-submodules
 git submodule update --remote
 git submodule update --remote --recursive // 嵌套的子模块
 ```
