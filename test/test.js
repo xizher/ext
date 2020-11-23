@@ -1,102 +1,51 @@
-// import './test-js.utils/test-js.utils'
-// import './test-js.ext/test-js.ext'
-// import './test-customevent/test-customevent'
-// import './test-datastructure/test-datastructure'
+require('babel-register')
+const assert = require('assert');
+require('../js.ext')
 
-// import { Map, Point, Polyline, Polygon } from '../customgisapi/dist'
-
-// window.load = () => {
-//   const map = new Map('foo')
-
-//   const point = new Point(100, 100)
-//   map.addGeometry(point)
-
-//   const polyline = new Polyline([[150, 100], [250, 200]])
-//   map.addGeometry(polyline)
-
-//   const polygon = new Polygon([[[150, 300], [250, 400], [180, 450]]])
-//   map.addGeometry(polygon)
-// }
-
-// import { Map, Point, Polyline } from '../customgisapi/dist'
-
-// window.load = () => {
-//   const map = new Map('foo')
-
-//   // const point = new Point(100, 100)
-//   // map.addGeometry(point)
-
-//   // const polyline = new Polyline([[150, 100], [250, 200]])
-//   // map.addGeometry(polyline)
-
-//   // const polygon = new Polygon([[[150, 300], [250, 400], [180, 450]]])
-//   // map.addGeometry(polygon)
-
-//   for (let i = -180; i <= 180; i += 10) {
-//     const line = new Polyline([[i, -80], [i, 80]])
-//     console.log('line')
-//     line.addTo(map)
-//   }
-
-//   for (let i = -80; i <= 80; i += 10) {
-//     const line = new Polyline([[-180, i], [180, i]])
-//     line.addTo(map)
-//   }
-
-//   for (let i = -180; i <= 180; i += 10) {
-//     for (let j = -90; j <= 80; j += 10) {
-//       const point = new Point(i, j)
-//       point.addTo(map)
-//     }
-//   }
-
-//   map.setView([0, 0], 5)
-
-// }
-
-import { Map, Point, Polyline, Polygon } from '../customgisapi/dist'
-window.load = () => {
-
-  const amap = new AMap.Map('amap', {
-    fadeOnZoom: false,
-    navigationMode: 'classic',
-    optimizePanAnimation: false,
-    animateEnable: false,
-    dragEnable: false,
-    zoomEnable: false,
-    resizeEnable: true,
-    doubleClickZoom: false,
-    keyboardEnable: false,
-    scrollWheel: false,
-    expandZoomRange: true,
-    zooms: [1, 20],
-    mapStyle: 'normal',
-    features: ['road', 'point', 'bg'],
-    viewMode: '2D',
-  })
-
-  const map = new Map('foo')
-  map.on('extent', event => {
-    amap.setZoomAndCenter(event.zoom, event.center)
-  })
-  for (let i = -180; i <= 180; i += 10) {
-    const line = new Polyline([[i, -80], [i, 80]])
-    line.addTo(map)
+const testObj = {
+  'string.ext' () {
+    describe('string.ext', () => {
+      it(`.trimAll():
+        ' xxx xx '.trimAll() -> 'xxxxx'`, () => {
+        const testStr = ' xxx xx '
+        assert(testStr.trimAll() === 'xxxxx')
+      })
+    
+      it(`.contain():
+        'cd'.contain(['ab', 'cd', 'df'] -> true
+        'cd'.contain(['ab', 'cd2', 'df'] -> false`, () => {
+        const testStr = 'cd'
+        assert(testStr.contain(['ab', 'cd', 'df']) === true)
+        assert(testStr.contain(['ab', 'cd2', 'df']) === false)
+      })
+      
+      it(`.replaceAll():
+        'AA_AB_BBC_DA'.replaceAll('B', 'A') -> 'AA_AA_AAC_DA'
+        'AA_AB_BBC_DA'.replaceAll('_', '') -> 'AAABBBCDA'`, () => {
+        const testStr = 'AA_AB_BBC_DA'
+        assert(testStr.replaceAll('B', 'A') === 'AA_AA_AAC_DA')
+        assert(testStr.replaceAll('_', '') === 'AAABBBCDA')
+      })
+    })
+  },
+  'date.ext' () {
+    describe('date.ext', () => {
+      const date = new Date('2020/01/01 08:14:50')
+      const MSECONDS_A_DAY = 86400000n
+      it(`.format():
+        date.format('yyyy-MM-dd') -> '2020-01-01'
+        date.format('hh:mm:ss') -> '08:14:50'`, () => {
+        assert(date.format('yyyy-MM-dd') === '2020-01-01')
+        assert(date.format('hh:mm:ss') === '08:14:50')
+      })
+      it(`.getNextDate():
+        date.getNextDate().getTime() - 86400000 -> date.getTime()`, () => {
+          assert(date.getNextDate().getTime() - MSECONDS_A_DAY === date.getTime())
+          assert(date.getNextDate().getTime(3) - MSECONDS_A_DAY * 3 === date.getTime())
+        })
+    })
   }
-  for (let i = -80; i <= 80; i += 10) {
-    const line = new Polyline([[-180, i], [180, i]])
-    line.addTo(map)
-  }
-  for (let i = -180; i <= 180; i += 10) {
-    for (let j = -90; j <= 80; j += 10) {
-      const point = new Point(i, j)
-      point.addTo(map)
-    }
-  }
-
-  const point = new Point(116.397411, 39.909186)
-  point.addTo(map)
-
-  map.setView([0, 0], 5)
-
 }
+
+testObj["string.ext"]()
+testObj["date.ext"]()

@@ -4,7 +4,7 @@
   "description": "javascript ext",
   "main": "test/electron/main.js",
   "scripts": {
-    "test": "nodemon --exec ./node_modules/.bin/babel-node ./test/test.js",
+    "test": "nodemon --exec ./node_modules/.bin/mocha test/test.js",
     "eslint": "eslint ./**/*.js",
     "electron": "./node_modules/.bin/electron ."
   },
@@ -25,11 +25,15 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.8.1",
     "@typescript-eslint/parser": "^4.8.1",
+    "assert": "^2.0.0",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
     "electron": "^11.0.1",
     "eslint": "^7.13.0",
+    "mocha": "^8.2.1",
     "nodemon": "^2.0.6",
+    "should": "^13.2.3",
     "tern": "^0.24.3",
     "typescript": "^4.0.5",
     "webpack": "^5.4.0",
