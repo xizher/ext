@@ -6,6 +6,7 @@
     "declaration": true,
     "module": "es2015",
     "target": "es6",
-    "moduleResolution": "Node"
+    "moduleResolution": "Node",
+    "watch": true
   }
 }

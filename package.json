@@ -4,9 +4,11 @@
   "description": "javascript ext",
   "main": "test/electron/main.js",
   "scripts": {
-    "test": "nodemon --exec ./node_modules/.bin/mocha test/test.js",
+    "test-mocha": "nodemon --exec ./node_modules/.bin/mocha test/test.mocha.js",
     "eslint": "eslint ./**/*.js",
-    "electron": "./node_modules/.bin/electron ."
+    "electron": "./node_modules/.bin/electron .",
+    "test-gis-tsc": "npx tsc",
+    "test-gis-webpack": "npx webpack -w"
   },
   "repository": {
     "type": "git",
