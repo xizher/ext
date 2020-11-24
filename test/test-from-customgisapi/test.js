@@ -20,7 +20,7 @@ window.load = () => {
   })
 
   const map = new Map('foo')
-  map.on('extent', event => {
+  map.on('extent-change', event => {
     amap.setZoomAndCenter(event.zoom, event.center)
   })
   for (let i = -180; i <= 180; i += 10) {
