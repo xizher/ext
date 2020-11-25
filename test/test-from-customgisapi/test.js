@@ -1,4 +1,11 @@
 import { Map, Point, Polyline, Polygon } from '../../customgisapi'
+import { delLocalStorage, delSessionStorage, getLocalStorage, getGeoLocation, getSessionStorage, setLocalStorage, setSessionStorage, watchGeoLocation } from '../../js.utils'
+
+getGeoLocation().then(res => {
+  console.log(res)
+}).catch(err => console.log(err))
+
+
 
 window.load = () => {
   const amap = new AMap.Map('amap', {
