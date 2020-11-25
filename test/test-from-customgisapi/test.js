@@ -1,6 +1,6 @@
 import { Map, Point, Polyline, Polygon } from '../../customgisapi'
-window.load = () => {
 
+window.load = () => {
   const amap = new AMap.Map('amap', {
     fadeOnZoom: false,
     navigationMode: 'classic',

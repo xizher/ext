@@ -5,6 +5,7 @@
   "main": "test/electron/main.js",
   "scripts": {
     "test-mocha": "nodemon --exec ./node_modules/.bin/mocha test/test.mocha.js",
+    "test-faker": "nodemon --exec ./node_modules/.bin/babel-node ./test/test.faker.js",
     "eslint": "eslint ./**/*.js",
     "electron": "./node_modules/.bin/electron .",
     "test-gis-tsc": "npx tsc",
@@ -42,6 +43,7 @@
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {
-    "crypto-js": "^4.0.0"
+    "crypto-js": "^4.0.0",
+    "faker": "^5.1.0"
   }
 }

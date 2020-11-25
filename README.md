@@ -1,4 +1,14 @@
-# ext
+# Javascript扩展集
+
+## - ext 集
+
+- customevent => 自定义工具类
+- js.ext => js原型扩展
+- js.utils => js通用函数
+- customgisapi => 自定义地图API
+- datastructure => js数据结构
+
+
 ## - 嵌套git项目
 
 ```bash
@@ -45,11 +55,4 @@ git submodule update --remote --recursive // 嵌套的子模块
 3. ```
    dtsmake -s 【js路径】
    ```
-## - ext 集
-
-- customevent => 自定义工具类
-- js.ext => js原型扩展
-- js.utils => js通用函数
-- customgisapi => 自定义地图API
-- datastructure => js数据结构
 
