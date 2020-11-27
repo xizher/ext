@@ -1,11 +1,9 @@
 import { Map, Point, Polyline, Polygon } from '../../customgisapi'
-import { delLocalStorage, delSessionStorage, getLocalStorage, getGeoLocation, getSessionStorage, setLocalStorage, setSessionStorage, watchGeoLocation } from '../../js.utils'
+import { 
+  isFromMobileBrowser
+} from '../../js.utils'
 
-getGeoLocation().then(res => {
-  console.log(res)
-}).catch(err => console.log(err))
-
-
+console.log(isFromMobileBrowser())
 
 window.load = () => {
   const amap = new AMap.Map('amap', {
