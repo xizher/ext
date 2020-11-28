@@ -23,6 +23,11 @@ git pull --recurse-submodules
 git submodule update --remote
 git submodule update --remote --recursive // 嵌套的子模块
 ```
+
+cd 到对应子模块目录下进行版本更新
+```bash
+git pull --tags origin main
+```
 ## - git 提交格式规范
 > <type>: <body>
 

@@ -57,4 +57,86 @@ describe('Array 扩展', () => {
       assert(test.length !== test2.length)
     })
   })
+  describe('.$equal()', () => {
+    it('数组全部项相等即为真', () => {
+      const test = [1, 2, 3]
+      const test2 = [1, 2, 3]
+      assert(test.$equal(test2) === true)
+    })
+    it('数组全部项不等即为假', () => {
+      const test = [1, 2, 4]
+      const test2 = [1, 2, 3]
+      assert(test.$equal(test2) !== true)
+    })
+    it('数组长度不等即为假', () => {
+      const test = [1, 2, 4]
+      const test2 = [1, 2]
+      assert(test.$equal(test2) !== true)
+    })
+  })
+  describe('.$findItem()', () => {
+    it('寻找到正确的对象', () => {
+      const test = [
+        { a: 1, b: 2 },
+        { a: 2, b: 4 },
+        { a: 3, b: 6 },
+      ]
+      const test2 = test.$findItem('a', 1)
+      assert(test2.b === 2)
+    })
+  })
+  describe('.$findItems()', () => {
+    it('寻找到正确的对象集', () => {
+      const test = [
+        { a: 1, b: 2 },
+        { a: 2, b: 4 },
+        { a: 1, b: 6 },
+      ]
+      const test2 = test.$findItems('a', 1)
+      assert(test2.length === 2 && test2[0].b === 2 && test2[1].b === 6)
+    })
+  })
+  describe('.$propToArr', () => {
+    it('获得到正确的属性项', () => {
+      const test = [
+        { a: 1, b: 2 },
+        { a: 2, b: 4 },
+        { a: 1, b: 6 },
+      ]
+      const test2 = test.$propToArr('b')
+      assert(test2.length === 3, test2.$equal([2, 4, 6]))
+    })
+  })
+  describe('.$sum()', () => {
+    it('1+2+3+4 值为 10', () => {
+      const test = [1, 2, 3, 4]
+      assert(test.$sum() === 10)
+    })
+  })
+  describe('.$last()', () => {
+    it('[1, 2, 3, 4] 最后一位是 4', () => {
+      const test = [1, 2, 3 , 4]
+      assert(test.$last() === 4)
+    })
+  })
+  describe('.$max()', () => {
+    it('[1, 2, 3, 4] 最大是 4', () => {
+      const test = [1, 2, 3 , 4]
+      assert(test.$max() === 4)
+    })
+  })
+  describe('.$min()', () => {
+    it('[1, 2, 3, 4] 最小是 1', () => {
+      const test = [1, 2, 3 , 4]
+      assert(test.$min() === 1)
+    })
+  })
+  describe('.$ave()', () => {
+    it('[1, 2, 3, 4] 平均值是 2.5', () => {
+      const test = [1, 2, 3, 4]
+      const test2 = test.$ave()
+      assert(test2 === 2.5)
+    })
+  })
+
 })
