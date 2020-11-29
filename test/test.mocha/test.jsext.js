@@ -140,3 +140,96 @@ describe('Array 扩展', () => {
   })
 
 })
+
+describe('String 扩展', () => {
+  describe('.$contain()', () => {
+    it('a 包含 在 [a, b, c]里面', () => {
+      const test = ['a', 'b', 'c']
+      assert('a'.$contain(test) === true)
+    })
+    it('a 不包含 在 [d, b, c]里面', () => {
+      const test = ['d', 'b', 'c']
+      assert('a'.$contain(test) !== true)
+    })
+  })
+  describe('.$trimAll()', () => {
+    it('能够清空字符串所有空格', () => {
+      const test = '  ttt aaa s '
+      assert(test.$trimAll() === 'tttaaas')
+    })
+  })
+  describe('.$replaceAll()', () => {
+    it('能够替换所有符合条件的字符', () => {
+      const test = 'Hello World! Welcome!'
+      assert(test.$replaceAll('o', '') === 'Hell Wrld! Welcme!')
+    })
+  })
+})
+
+describe('Number 扩展', () => {
+  describe('.$toChineseNum()', () => {
+    // it('101 是 一百零一', () => {
+    //   const test = 101
+    //   assert(test.$toChineseNum() === '一百零一', test.$toChineseNum())
+    // })
+  })
+  describe('.$.floor()', () => {
+    it('1.6 结果是 1', () => {
+      const test = 1.6
+      assert(test.$floor() === 1)
+    })
+  })
+  describe('.$ceil()', () => {
+    it('1.1 结果是2', () => {
+      const test = 1.1
+      assert(test.$ceil() === 2)
+    })
+  })
+  describe('.$abs()', () => {
+    it('-2 结果是 2', () => {
+      const test = -2
+      assert(test.$abs() === 2)
+    })
+  })
+  describe('.$round()', () => {
+    it('1.4 结果是 1', () => {
+      const test = 1.4
+      assert(test.$round() === 1)
+    })
+    it('1.5 结果是 2', () => {
+      const test = 1.5
+      assert(test.$round() === 2)
+    })
+  })
+  describe('.$toDateFormat', () => {
+    it('0 是 1970年', () => {
+      const test = 0
+      assert(test.$toDateFormat('yyyy') === '1970')
+    })
+  })
+})
+
+describe('Date 扩展', () => {
+  describe('.$format()', () => {
+    it('2020/01/30 08:44:55', () => {
+      const date = new Date('2020/01/30 08:44:55')
+      assert(date.$format('yyyy/MM/dd hh:mm:ss') === '2020/01/30 08:44:55')
+    })
+  })
+  describe('.$getNextDate()', () => {
+    it('2020/01/31 下一天是 1号', () => {
+      const date = new Date('2020/01/31')
+      assert(date.$getNextDate().getDate() === 1)
+    })
+    it('2020/01/31 前两天是 29号', () => {
+      const date = new Date('2020/01/31')
+      assert(date.$getNextDate(-2).getDate() === 29)
+    })
+  })
+  describe('.$getMonth()', () => {
+    it('2020/01/31 月份是 1', () => {
+      const date = new Date('2020/01/31')
+      assert(date.$getMonth() === 1)
+    })
+  })
+})
