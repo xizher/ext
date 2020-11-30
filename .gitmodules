@@ -13,3 +13,6 @@
 [submodule "customgisapi"]
 	path = customgisapi
 	url = https://github.com/xizher/customgisapi.git
+[submodule "spatialalgorithms"]
+	path = spatialalgorithms
+	url = https://github.com/xizher/spatialalgorithms.git

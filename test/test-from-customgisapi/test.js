@@ -1,5 +1,5 @@
 import { Map, Point, Polyline, Polygon, GraphicLayer, SimpleLineSymbol, Graphic, SimplePointSymbol, SimpleMarkerSymbol } from '../../customgisapi'
-
+import { concavityAndConvexityOfPolygonVertices, polygonDirection } from '../../spatialalgorithms'
 window.load = () => {
   new Vue({
     el: '#app',
@@ -119,10 +119,12 @@ window.load = () => {
         lonlats[0].push(event.lonlat)
       })
       map.on('dbclick', event => {
-        lonlats[0].slice(0, lonlats[0].length - 1)
+        lonlats = [lonlats[0].slice(0, lonlats[0].length - 1)]
         const polygon = new Polygon(lonlats)
         const graphic = new Graphic(polygon)
         map.addGraphic(graphic)
+        console.log(polygonDirection(lonlats))
+        console.log(concavityAndConvexityOfPolygonVertices(lonlats, lonlats[0][1]))
         lonlats = [[]]
       })
 
