@@ -4,11 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Custom GIS API Test</title>
+  <script src="https://unpkg.com/vue@2.6.12/dist/vue.js"></script>
+  <link rel="stylesheet" href="https://unpkg.com/element-ui@2.14.1/lib/theme-chalk/index.css">
+  <script src="https://unpkg.com/element-ui@2.14.1/lib/index.js"></script>
   <script src="https://webapi.amap.com/maps?v=1.4.15&key=5af21451ca8c85059a369acfaada88b7"></script>
   <script src="./dist/bundle.js"></script>
+  <style>
+    #app span {
+      padding-left: 8px;
+    }
+    #app .el-input {
+      width: 200px;
+    }
+    #app > * {
+      margin-top: 8px;
+    }
+  </style>
 </head>
 <body style="margin: 0;" onload="load()">
-  <div id="foo" style="width: 100vw; height: 60vh; position: absolute; z-index: 2;"></div>
-  <div id="amap" style="width: 100vw; height: 60vh; position: absolute; z-index: 1;"></div>
+  <div id="foo" style="width: 100vw; height: 60vh; position: absolute;top: 0; z-index: 2;"></div>
+  <div id="amap" style="width: 100vw; height: 60vh; position: absolute;top: 0; z-index: 1;"></div>
+  <div id="app" style="margin-top: 61vh;height: 39vh;overflow: auto; display: flex;flex-wrap: wrap;flex-direction: column;">
+    <div><span> 鼠标所在位置lon：</span><el-input v-model="mouse.lon"></el-input></div>
+    <div><span> 鼠标所在位置lat：</span><el-input v-model="mouse.lat"></el-input></div>
+    <div><span> 鼠标所在位置x：</span><el-input v-model="mouse.x"></el-input></div>
+    <div><span> 鼠标所在位置y：</span><el-input v-model="mouse.y"></el-input></div>
+    <div><span> 中心点X：</span><el-input v-model="center.x"></el-input></div>
+    <div><span> 中心点Y：</span><el-input v-model="center.y"></el-input></div>
+    <div><span> 范围XMIN：</span><el-input v-model="extent.xmin"></el-input></div>
+    <div><span> 范围YMIN：</span><el-input v-model="extent.ymin"></el-input></div>
+    <div><span> 范围XMAX：</span><el-input v-model="extent.xmax"></el-input></div>
+    <div><span> 范围YMAX：</span><el-input v-model="extent.ymax"></el-input></div>
+    <div><span> 变换矩阵参数a：</span><el-input v-model="matrix.a"></el-input></div>
+    <div><span> 变换矩阵参数d：</span><el-input v-model="matrix.d"></el-input></div>
+    <div><span> 变换矩阵参数e：</span><el-input v-model="matrix.e"></el-input></div>
+    <div><span> 变换矩阵参数f：</span><el-input v-model="matrix.f"></el-input></div>
+  </div>
 </body>
 </html>
