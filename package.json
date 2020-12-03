@@ -5,7 +5,7 @@
   "main": "test/electron/main.js",
   "scripts": {
     "test-mocha": "nodemon --exec ./node_modules/.bin/mocha test/test.mocha.js",
-    "test-faker": "nodemon --exec ./node_modules/.bin/babel-node ./test/test.faker.js",
+    "test": "nodemon --exec ./node_modules/.bin/babel-node ./test/test.js",
     "eslint": "eslint ./**/*.js",
     "electron": "./node_modules/.bin/electron .",
     "test-gis-tsc": "npx tsc",

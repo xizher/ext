@@ -3,7 +3,8 @@ import {
   concavityAndConvexityOfPolygonVertices,
   polygonDirection,
   distanceFromTwoPoint,
-  distanceFromTwoPointByManhattan
+  distanceFromTwoPointByManhattan,
+  centerFromTwoPoint
 } from '../../spatialalgorithms'
 
 
@@ -142,4 +143,5 @@ window.load = () => {
 window.load = () => {
   console.log(distanceFromTwoPoint([0, 0], [1, 1]))
   console.log(distanceFromTwoPointByManhattan([0, 0], [1, 1]))
+  console.log(centerFromTwoPoint([2, 2], [1, 1]))
 }
