@@ -1,5 +1,12 @@
 import { Map, Point, Polyline, Polygon, GraphicLayer, SimpleLineSymbol, Graphic, SimplePointSymbol, SimpleMarkerSymbol } from '../../customgisapi'
-import { concavityAndConvexityOfPolygonVertices, polygonDirection } from '../../spatialalgorithms'
+import {
+  concavityAndConvexityOfPolygonVertices,
+  polygonDirection,
+  distanceFromTwoPoint,
+  distanceFromTwoPointByManhattan
+} from '../../spatialalgorithms'
+
+
 window.load = () => {
   new Vue({
     el: '#app',
@@ -130,4 +137,9 @@ window.load = () => {
 
     }
   })
+}
+
+window.load = () => {
+  console.log(distanceFromTwoPoint([0, 0], [1, 1]))
+  console.log(distanceFromTwoPointByManhattan([0, 0], [1, 1]))
 }
