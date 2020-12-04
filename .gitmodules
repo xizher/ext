@@ -16,3 +16,6 @@
 [submodule "spatialalgorithms"]
 	path = spatialalgorithms
 	url = https://github.com/xizher/spatialalgorithms.git
+[submodule "nodejs"]
+	path = nodejs
+	url = https://github.com/xizher/nodejs.git
