@@ -207,6 +207,12 @@ describe('Number 扩展', () => {
       assert(test.$toDateFormat('yyyy') === '1970')
     })
   })
+  describe('.$toCashString', () => {
+    it('1234567890 是 1,234,567,890', () => {
+      const test = 1234567890
+      assert(test.$toCashString() === '1,234,567,890')
+    })
+  })
 })
 
 describe('Date 扩展', () => {
