@@ -1,6 +1,4 @@
-// const { Graph, breadthFirstSearch, breadthFirstSearchV2 } = require("../datastructure");
-
-import { deepCopy } from '../js.utils'
+import { deepExtent } from '../js.utils'
 
 // let graph = new Graph();
 // let myVertices = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
@@ -22,12 +20,14 @@ import { deepCopy } from '../js.utils'
 
 // console.log(breadthFirstSearchV2(graph, 'A'))
 
-// const obj1 = { a: { b: 2 } }
-// const obj2 = deepCopy(obj1)
+// let obj1 = { a: { b: 2 } }
+// let obj2 = deepCopy(obj1)
 // // obj2.c = 2
 // obj2.a.b = 3
 // console.log(obj1)
 // console.log(obj2)
 
-console.log(parseInt(0.0000008))
-console.log(parseInt(0.0000008) === 8)
+const obj1 = { a: 1, b: { c: 2, e: 1 } }
+const obj2 = { a: 2, b: { c: 3, d: 4 } }
+const t = deepExtent(true, obj1, obj2)
+console.log(t)
