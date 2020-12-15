@@ -5,7 +5,7 @@ module.exports = {
     'commonjs': true,
     'es2021': true
   },
-  // 'parser': '@babel/eslint-parser',
+  'parser': '@babel/eslint-parser',
   'extends': [
     'eslint:recommended',
     // "plugin:@typescript-eslint/recommended"
