@@ -27,6 +27,11 @@
   },
   "homepage": "https://github.com/xizher/ext#readme",
   "devDependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/eslint-parser": "^7.12.1",
+    "@babel/plugin-proposal-class-properties": "^7.12.1",
+    "@types/mongodb": "^3.6.3",
+    "@types/pg": "^7.14.7",
     "@typescript-eslint/eslint-plugin": "^4.8.1",
     "@typescript-eslint/parser": "^4.8.1",
     "assert": "^2.0.0",
@@ -44,11 +49,6 @@
     "webpack-cli": "^4.2.0"
   },
   "dependencies": {
-    "@babel/core": "^7.12.10",
-    "@babel/eslint-parser": "^7.12.1",
-    "@babel/plugin-proposal-class-properties": "^7.12.1",
-    "@types/mongodb": "^3.6.0",
-    "@types/pg": "^7.14.7",
     "crypto-js": "^4.0.0",
     "faker": "^5.1.0",
     "mongodb": "^3.6.3",
