@@ -1,4 +1,8 @@
-import { deepExtent } from '../js.utils'
+// import { deepExtent } from '../js.utils'
+
+import { bubbleSort, insertionSort, selectionSort } from "../datastructure/sort/sort"
+
+// import { LinkedList } from '../datastructure/linkedlist/linkedlist'
 
 // let graph = new Graph();
 // let myVertices = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I'];
@@ -27,7 +31,31 @@ import { deepExtent } from '../js.utils'
 // console.log(obj1)
 // console.log(obj2)
 
-const obj1 = { a: 1, b: { c: 2, e: 1 } }
-const obj2 = { a: 2, b: { c: 3, d: 4 } }
-const t = deepExtent(true, obj1, obj2)
-console.log(t)
+// const obj1 = { a: 1, b: { c: 2, e: 1 } }
+// const obj2 = { a: 2, b: { c: 3, d: 4 } }
+// const t = deepExtent(true, obj1, obj2)
+// console.log(t)
+
+// const linkedList = new LinkedList()
+
+// linkedList.append(1)
+// linkedList.append(2)
+// linkedList.append(3)
+// linkedList.insert(1, -1)
+// linkedList.insert(0, 0)
+// linkedList.insert(0, 6)
+// linkedList.insert(1, 2)
+// console.log(linkedList.toArray())
+// console.log(linkedList.indexOf(2))
+// console.log(linkedList.removeAt(2))
+// console.log(linkedList.removeAll(2))
+
+// console.log(linkedList.size(), linkedList.toArray())
+
+const arr = [3, 2, 4, 5, 1]
+
+insertionSort(arr, {
+  desc: false
+})
+
+console.log(arr)
