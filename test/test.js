@@ -1,6 +1,6 @@
 // import { deepExtent } from '../js.utils'
 
-import { bubbleSort, insertionSort, selectionSort } from "../datastructure/sort/sort"
+import { bubbleSort, insertionSort, mergeSort, quickSort, selectionSort, shellSort } from "../datastructure/sort/sort.js"
 
 // import { LinkedList } from '../datastructure/linkedlist/linkedlist'
 
@@ -53,9 +53,19 @@ import { bubbleSort, insertionSort, selectionSort } from "../datastructure/sort/
 // console.log(linkedList.size(), linkedList.toArray())
 
 const arr = [3, 2, 4, 5, 1]
+const arr2 = [{ a: 3, b: 1 },
+  { a: 2, b: 1 },
+  { a: 4, b: 1 },
+  { a: 5, b: 1 },
+  { a: 1, b: 1 },]
 
-insertionSort(arr, {
-  desc: false
+selectionSort(arr, {
+  desc: true
+})
+selectionSort(arr2, {
+  desc: false,
+  callback: item => item.a
 })
 
 console.log(arr)
+console.log(arr2)
