@@ -19,3 +19,9 @@
 [submodule "nodejs"]
 	path = nodejs
 	url = https://github.com/xizher/nodejs.git
+[submodule "evention"]
+	path = evention
+	url = https://github.com/xizher/evention.git
+[submodule "comparator"]
+	path = comparator
+	url = https://github.com/xizher/comparator.git
