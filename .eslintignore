@@ -3,6 +3,6 @@ node_modules/*
 *.ts
 **/dist
 **/*.min.*
-test/*
+__tests__/*
 webpack.config.js
 *.vue
