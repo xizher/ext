@@ -1,6 +1,1 @@
-require('babel-register')
-
-require('./test.mocha/test.RegexpHelper')
-require('./test.mocha/test.crypto')
-require('./test.mocha/test.jsext')
-require('./test.mocha/test.utils')
+import './comparator.test/comparator.mocha.test.js'
