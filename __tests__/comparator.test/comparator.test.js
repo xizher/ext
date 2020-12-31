@@ -9,4 +9,4 @@ const obj2 = {
 
 const comparator = new Comparator((a, b) => a.a - b.a)
 
-console.log(comparator.lessThan(obj1, obj2))
+// console.log(comparator.lessThan(obj1, obj2))
