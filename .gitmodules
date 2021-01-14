@@ -25,3 +25,6 @@
 [submodule "comparator"]
 	path = comparator
 	url = https://github.com/xizher/comparator.git
+[submodule "leetcode"]
+	path = leetcode
+	url = https://github.com/xizher/leetcode.git
